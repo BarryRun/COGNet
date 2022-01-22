@@ -22,7 +22,7 @@ from beam import Beam
 import sys
 sys.path.append("..")
 from models import Leap, CopyDrug_batch, CopyDrug_tranformer, CopyDrug_generate_prob, CopyDrug_diag_proc_encode
-from COGNet_model import CopyModel
+from COGNet_model import COGNet
 from util import llprint, sequence_metric, sequence_metric_v2, sequence_output_process, ddi_rate_score, get_n_params, output_flatten, print_result
 
 torch.manual_seed(1203)
