@@ -115,4 +115,6 @@ Partial credit to previous reprostories:
 - https://github.com/ycq091044/SafeDrug
 - https://github.com/ycq091044/MICRON
 
-Thank Chaoqi Yang and Junyuan Shang for releasing their codes!
+Thank [Chaoqi Yang](https://github.com/ycq091044) and [Junyuan Shang](https://github.com/sjy1203) for releasing their codes!
+
+Thank my mentor, [Zhaopeng Qiu](https://github.com/zpqiu), for helping me complete the code.
