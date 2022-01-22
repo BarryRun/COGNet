@@ -21,7 +21,7 @@ from data_loader import mimic_data, pad_batch_v2_train, pad_batch_v2_eval, pad_n
 import sys
 sys.path.append("..")
 from COGNet_ablation import COGNet_wo_copy, COGNet_wo_visit_score, COGNet_wo_graph, COGNet_wo_diag, COGNet_wo_proc
-from COGNet_model import CopyModel, policy_network
+from COGNet_model import COGNet, policy_network
 from util import llprint, sequence_metric, sequence_output_process, ddi_rate_score, get_n_params, output_flatten, print_result
 from recommend import eval, test
 
@@ -29,7 +29,7 @@ torch.manual_seed(1203)
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-model_name = 'CopyDrug.10.20_later_first'
+model_name = 'COGNet'
 resume_path = ''
 
 if not os.path.exists(os.path.join("saved", model_name)):
@@ -108,7 +108,7 @@ def main(args):
     SOS_TOKEN = voc_size[2]
     TOKENS = [END_TOKEN, DIAG_PAD_TOKEN, PROC_PAD_TOKEN, MED_PAD_TOKEN, SOS_TOKEN]
 
-    model = CopyModel(voc_size, ehr_adj, ddi_adj, ddi_mask_H, emb_dim=args.emb_dim, device=device)
+    model = COGNet(voc_size, ehr_adj, ddi_adj, ddi_mask_H, emb_dim=args.emb_dim, device=device)
 
     if args.Test:
         model.load_state_dict(torch.load(open(args.resume_path, 'rb')))

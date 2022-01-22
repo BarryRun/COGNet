@@ -9,11 +9,11 @@
     - COGNet_ablation.py: ablation models of COGNet
     - train/test baselines:
         - MICRON.py
-        - Other code of train/test baselines can be find [here](https://github.com/ycq091044/SafeDrug)
+        - Other code of train/test baselines can be find [here](https://github.com/ycq091044/SafeDrug).
     - models.py: baseline models
     - util.py
     - layer.py
-- data/ (For a fair comparision, we use the same data and pre-processing scripts used in [Safedrug](https://github.com/ycq091044/SafeDrug))
+- data/ **(For a fair comparision, we use the same data and pre-processing scripts used in [Safedrug](https://github.com/ycq091044/SafeDrug))**
     - mapping files that collected from external sources
         - drug-atc.csv: drug to atc code mapping file
         - drug-DDI.csv: this a large file, could be downloaded from https://drive.google.com/file/d/1mnPc0O0ztz0fkv3HF-dpmBb8PLWsEoDz/view?usp=sharing
@@ -23,8 +23,7 @@
     - other files that generated from mapping files and MIMIC dataset (we attach these files here, user could use our provided scripts to generate)
         - data_final.pkl: intermediate result
         - ddi_A_final.pkl: ddi matrix
-        - ddi_matrix_H.pkl: H mask structure (This file is created by ddi_mask_H.py)
-        - ehr_adj_final.pkl: used in GAMENet baseline
+        - ddi_matrix_H.pkl: H mask structure (This file is created by ddi_mask_H.py), used in Safedrug baseline
         - idx2ndc.pkl: idx2ndc mapping file
         - ndc2drug.pkl: ndc2drug mapping file
         - Under MIMIC Dataset policy, we are not allowed to distribute the datasets. Practioners could go to https://physionet.org/content/mimiciii/1.4/ and requrest the access to MIMIC-III dataset and then run our processing script to get the complete preprocessed dataset file.
