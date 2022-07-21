@@ -69,6 +69,7 @@
 ```python
 conda env create -f mimic_env.yaml
 ```
+Note: maybe you need to upgrade the PyTorch to the 1.10.0 version. (Thank [Thomaswbt](https://github.com/Thomaswbt) a lot!)
 
 
 ### Step 3: run the code
